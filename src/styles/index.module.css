@@ -1,11 +1,17 @@
-body {
+@import "./normalize.css";
+
+.wrapper {
 	font-family: Consolas, Monaco, monospace;
 	font-size: 16px;
+	margin: 1rem auto;
+	max-width: 1024px;
 }
 
 .debug {
 	display: block;
 	width: 100%;
+	min-height: 20vh;
 	background-color: pink;
 	color: red;
+	padding: 1rem;
 }

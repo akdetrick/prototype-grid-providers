@@ -1,17 +1,23 @@
 import React from "react";
 
-import LayoutGroupMain from "../components/LayoutGroupMain";
+import createGridProvider from "../util/createGridProvider";
 
-import styles from "./index.module.css";
+import indexStyles from "../styles/index.module.css";
+import gridStyles from "../styles/gridTemplates/groupMain.module.css";
+
+const LayoutGroupHome = createGridProvider(
+	gridStyles,
+	['head', 'body', 'sidebar', 'foot']
+);
 
 const Wrapper = (props) => (
-	<div className={styles.body}>
-		<div>Hello world!</div>
-		<LayoutGroupMain
-			head={<h1 className={styles.debug}>head el</h1>}
-			body={<p className={styles.debug}>body</p>}
-			sidebar={<p className={styles.debug}>sidebar</p>}
-			foot={<footer className={styles.debug}>foot</footer>}
+	<div className={indexStyles.wrapper}>
+		<h2>Grid Provider Demo</h2>
+		<LayoutGroupHome
+			head={<div className={indexStyles.debug}>head el</div>}
+			body={<div className={indexStyles.debug}>body</div>}
+			sidebar={<div className={indexStyles.debug}>sidebar</div>}
+			foot={<div className={indexStyles.debug}>foot</div>}
 		/>
 	</div>
 );
