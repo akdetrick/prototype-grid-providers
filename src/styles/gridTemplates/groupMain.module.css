@@ -7,20 +7,8 @@
 		"foot foot foot"
 	;
 }
-
-.gridArea--head {
-	grid-area: head;
-}
-
-.gridArea--body {
-	grid-area: body;
-}
-
-.gridArea--sidebar {
-	grid-area: sidebar;
-}
-
-.gridArea--foot {
-	grid-area: foot;
-}
+.gridArea--head { grid-area: head; }
+.gridArea--body { grid-area: body; }
+.gridArea--sidebar { grid-area: sidebar; }
+.gridArea--foot { grid-area: foot; }
 
