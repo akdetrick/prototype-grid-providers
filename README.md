@@ -23,7 +23,7 @@ Proof of concept for working with CSS Grids in React
 ### JSX
 ```jsx
 const LayoutGroupHome = createGridProvider(
-	gridStyles, // comes from `src/styles/gridTemplates/groupMain.module.css` (shown above)
+	gridStyles, // the above CSS imported as a module
 	['head', 'body', 'sidebar', 'foot']
 );
 
