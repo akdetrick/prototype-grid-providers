@@ -1,7 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
-  "license": "MIT",
+  "name": "prototype-grid-providers",
+  "description": "Proof of concept for React components providing Grid layouts",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
