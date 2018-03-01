@@ -5,10 +5,7 @@ import createGridProvider from "../util/createGridProvider";
 import indexStyles from "../styles/index.module.css";
 import gridStyles from "../styles/gridTemplates/groupMain.module.css";
 
-const LayoutGroupHome = createGridProvider(
-	gridStyles,
-	['head', 'body', 'sidebar', 'foot']
-);
+const LayoutGroupHome = createGridProvider(gridStyles);
 
 const Wrapper = (props) => (
 	<div className={indexStyles.wrapper}>

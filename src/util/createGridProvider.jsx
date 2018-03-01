@@ -8,8 +8,8 @@ import cx from 'classnames';
  *
  * Usage:
  * ```
- * import styles from 'styles/gridTemplates/someLayout.module.css';
- * const MyLayoutComponent = createGridProvider(styles, ['head', 'body', 'sidebar', 'foot']);
+ * import gridTemplate from 'styles/gridTemplates/someLayout.module.css';
+ * const MyLayoutComponent = createGridProvider(gridTemplate);
  *
  * const SomePage = () => (
  * 	<MyLayoutComponent
@@ -22,10 +22,17 @@ import cx from 'classnames';
  * ```
  *
  * @param {Object} cssModule - must follow grid provider conventions (link to docs TK)
- * @param {String} gridAreas
  * @returns {Function} stateless functional react component
  */
-const createGridProvider = (cssModule, gridAreas) => {
+const createGridProvider = (cssModule) => {
+	const gridAreas = Object.keys(cssModule)
+		.filter(s => s.includes('gridArea'))
+		.map(s => s.split('--')[1]);
+
+	if (gridAreas.length < 1) {
+		console.warn('Ignoring grid styles; could not find grid areas in module: ', cssModule);
+	};
+
 	const Component = (props) => (
 		<div className={cssModule.gridTemplate}>
 			{gridAreas
