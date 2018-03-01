@@ -7,6 +7,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.202",
     "gatsby-link": "^1.6.37",
     "prop-types": "^15.6.0"

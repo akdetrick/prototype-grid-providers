@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 /**
  * @function createGridProvider
@@ -28,11 +29,14 @@ const createGridProvider = (cssModule, gridAreas) => {
 	const Component = (props) => (
 		<div className={cssModule.gridTemplate}>
 			{gridAreas
-				.map(areaName => (
-					<div className={cssModule[`gridArea--${areaName}`]}>
-						{props[areaName]}
-					</div>
-				))}
+				.map((areaName, i) => React.cloneElement(
+						props[areaName],
+						{
+							key: i,
+							className: cx(props[areaName].props.className, cssModule[`gridArea--${areaName}`]),
+						}
+					)
+				)}
 		</div>
 	);
 
