@@ -1,4 +1,10 @@
-# prototype-grid-providers
+# ⚠️ Don't do this
+
+The resulting api below probably proves that defining grids in CSS makes more sense than a comopnent abstraction.
+
+---
+
+## prototype-grid-providers
 
 Proof of concept for working with CSS Grids in React
 
